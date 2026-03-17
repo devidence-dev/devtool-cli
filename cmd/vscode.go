@@ -18,12 +18,12 @@ import (
 
 var vscodeCmd = &cobra.Command{
 	Use:   "vscode",
-	Short: "Comandos relacionados a VS Code",
+	Short: "VS Code related commands",
 }
 
 var vscodeKillCmd = &cobra.Command{
 	Use:   "kill",
-	Short: "Termina procesos huérfanos de VS Code Remote SSH",
+	Short: "Kill orphaned VS Code Remote SSH processes",
 	RunE:  runVSCodeKill,
 }
 
@@ -40,31 +40,31 @@ func runVSCodeKill(cmd *cobra.Command, args []string) error {
 
 	user := os.Getenv("USER")
 
-	spinner, _ := pterm.DefaultSpinner.Start(fmt.Sprintf("Buscando procesos de VS Code Server para %s...", user))
+	spinner, _ := pterm.DefaultSpinner.Start(fmt.Sprintf("Searching VS Code Server processes for %s...", user))
 	pids, err := findVSCodePIDs(user)
 	if err != nil {
-		spinner.Fail("Error al buscar procesos")
+		spinner.Fail("Error searching for processes")
 		return err
 	}
 
 	if len(pids) == 0 {
-		spinner.Success("No se encontraron procesos de VS Code Server")
+		spinner.Success("No VS Code Server processes found")
 		return nil
 	}
-	spinner.Success(fmt.Sprintf("%d proceso(s) encontrado(s)", len(pids)))
+	spinner.Success(fmt.Sprintf("%d process(es) found", len(pids)))
 	fmt.Println()
 
 	printProcessTable(pids)
 	fmt.Println()
 
-	ok, _ := pterm.DefaultInteractiveConfirm.Show("¿Terminar estos procesos?")
+	ok, _ := pterm.DefaultInteractiveConfirm.Show("Kill these processes?")
 	if !ok {
-		ui.Info("Operación cancelada")
+		ui.Info("Operation cancelled")
 		return nil
 	}
 
 	fmt.Println()
-	killSpinner, _ := pterm.DefaultSpinner.Start("Terminando procesos con SIGTERM...")
+	killSpinner, _ := pterm.DefaultSpinner.Start("Sending SIGTERM...")
 	for _, pid := range pids {
 		if p, err := os.FindProcess(pid); err == nil {
 			_ = p.Signal(syscall.SIGTERM)
@@ -80,7 +80,7 @@ func runVSCodeKill(cmd *cobra.Command, args []string) error {
 	}
 
 	if len(remaining) > 0 {
-		killSpinner.Warning("Algunos procesos resistieron SIGTERM, usando SIGKILL...")
+		killSpinner.Warning("Some processes survived SIGTERM, sending SIGKILL...")
 		for _, pid := range remaining {
 			if p, err := os.FindProcess(pid); err == nil {
 				_ = p.Signal(syscall.SIGKILL)
@@ -88,7 +88,7 @@ func runVSCodeKill(cmd *cobra.Command, args []string) error {
 		}
 	}
 
-	killSpinner.Success("Todos los procesos de VS Code Server han sido terminados")
+	killSpinner.Success("All VS Code Server processes have been terminated")
 	return nil
 }
 
@@ -121,7 +121,7 @@ func findVSCodePIDs(user string) ([]int, error) {
 }
 
 func printProcessTable(pids []int) {
-	tableData := pterm.TableData{{"PID", "%CPU", "%MEM", "COMANDO"}}
+	tableData := pterm.TableData{{"PID", "%CPU", "%MEM", "COMMAND"}}
 
 	for _, pid := range pids {
 		out, err := exec.Command("ps", "-p", strconv.Itoa(pid), "-o", "pid=,%cpu=,%mem=,command=").Output()

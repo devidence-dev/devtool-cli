@@ -4,7 +4,7 @@ import "github.com/spf13/cobra"
 
 var rootCmd = &cobra.Command{
 	Use:   "devtool",
-	Short: "Herramientas de desarrollo",
+	Short: "Developer tooling CLI",
 }
 
 func Execute() error {

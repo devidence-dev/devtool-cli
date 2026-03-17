@@ -13,12 +13,12 @@ import (
 
 var vagrantCmd = &cobra.Command{
 	Use:   "vagrant",
-	Short: "Comandos relacionados a Vagrant",
+	Short: "Vagrant related commands",
 }
 
 var vagrantCleanupCmd = &cobra.Command{
 	Use:   "cleanup",
-	Short: "Limpia boxes de Vagrant y recursos de libvirt",
+	Short: "Clean up Vagrant boxes and libvirt resources",
 	RunE:  runVagrantCleanup,
 }
 
@@ -34,28 +34,28 @@ func runVagrantCleanup(cmd *cobra.Command, args []string) error {
 		Println("Vagrant & Libvirt Cleanup")
 
 	if !commandExists("vagrant") {
-		ui.Error("Vagrant no está instalado en el sistema")
-		return fmt.Errorf("vagrant no encontrado")
+		ui.Error("Vagrant is not installed on this system")
+		return fmt.Errorf("vagrant not found")
 	}
 
 	libvirtInstalled := commandExists("virsh")
 	if !libvirtInstalled {
-		ui.Warning("libvirt/virsh no está instalado. Se omitirá la limpieza de libvirt")
+		ui.Warning("libvirt/virsh is not installed. Libvirt cleanup will be skipped")
 	}
 
 	showCurrentState(libvirtInstalled)
 
 	options := []string{
-		"1. Destruir todas las VMs de Vagrant",
-		"2. Eliminar boxes de Vagrant no utilizados",
-		"3. Eliminar todos los boxes de Vagrant",
-		"4. Limpiar volúmenes huérfanos de libvirt",
-		"5. Limpiar dominios inactivos de libvirt",
-		"6. Limpieza completa (todas las opciones anteriores)",
-		"7. Salir",
+		"1. Destroy all Vagrant VMs",
+		"2. Remove unused Vagrant boxes",
+		"3. Remove all Vagrant boxes",
+		"4. Clean orphaned libvirt volumes",
+		"5. Clean inactive libvirt domains",
+		"6. Full cleanup (all of the above)",
+		"7. Exit",
 	}
 
-	selected, err := pterm.DefaultInteractiveSelect.WithOptions(options).Show("Selecciona una opción")
+	selected, err := pterm.DefaultInteractiveSelect.WithOptions(options).Show("Select an option")
 	if err != nil {
 		return err
 	}
@@ -63,50 +63,50 @@ func runVagrantCleanup(cmd *cobra.Command, args []string) error {
 
 	switch {
 	case strings.HasPrefix(selected, "1."):
-		ok, _ := pterm.DefaultInteractiveConfirm.Show("¿Estás seguro de destruir todas las VMs?")
+		ok, _ := pterm.DefaultInteractiveConfirm.Show("Are you sure you want to destroy all VMs?")
 		if ok {
-			withSpinner("Destruyendo todas las VMs de Vagrant...", "VMs destruidas", destroyAllVMs)
+			withSpinner("Destroying all Vagrant VMs...", "VMs destroyed", destroyAllVMs)
 		}
 
 	case strings.HasPrefix(selected, "2."):
-		ok, _ := pterm.DefaultInteractiveConfirm.Show("¿Deseas eliminar los boxes no utilizados?")
+		ok, _ := pterm.DefaultInteractiveConfirm.Show("Remove unused boxes?")
 		if ok {
-			withSpinner("Eliminando boxes no utilizados...", "Boxes no utilizados eliminados", func() {
+			withSpinner("Removing unused boxes...", "Unused boxes removed", func() {
 				runCmd("vagrant", "box", "prune", "-f")
 			})
 		}
 
 	case strings.HasPrefix(selected, "3."):
-		ok, _ := pterm.DefaultInteractiveConfirm.Show("¡ADVERTENCIA! ¿Deseas eliminar TODOS los boxes?")
+		ok, _ := pterm.DefaultInteractiveConfirm.Show("WARNING! Remove ALL boxes?")
 		if ok {
-			withSpinner("Eliminando todos los boxes...", "Todos los boxes eliminados", removeAllBoxes)
+			withSpinner("Removing all boxes...", "All boxes removed", removeAllBoxes)
 		}
 
 	case strings.HasPrefix(selected, "4."):
 		if !libvirtInstalled {
-			ui.Error("libvirt no está disponible")
-			return fmt.Errorf("libvirt no encontrado")
+			ui.Error("libvirt is not available")
+			return fmt.Errorf("libvirt not found")
 		}
-		ok, _ := pterm.DefaultInteractiveConfirm.Show("¿Deseas eliminar volúmenes huérfanos?")
+		ok, _ := pterm.DefaultInteractiveConfirm.Show("Remove orphaned volumes?")
 		if ok {
-			withSpinner("Limpiando volúmenes huérfanos de libvirt...", "Volúmenes huérfanos limpiados", cleanLibvirtVolumes)
+			withSpinner("Cleaning orphaned libvirt volumes...", "Orphaned volumes cleaned", cleanLibvirtVolumes)
 		}
 
 	case strings.HasPrefix(selected, "5."):
 		if !libvirtInstalled {
-			ui.Error("libvirt no está disponible")
-			return fmt.Errorf("libvirt no encontrado")
+			ui.Error("libvirt is not available")
+			return fmt.Errorf("libvirt not found")
 		}
-		ok, _ := pterm.DefaultInteractiveConfirm.Show("¿Deseas eliminar dominios inactivos que contengan 'vagrant'?")
+		ok, _ := pterm.DefaultInteractiveConfirm.Show("Remove inactive domains containing 'vagrant'?")
 		if ok {
-			withSpinner("Limpiando dominios inactivos de libvirt...", "Dominios inactivos limpiados", cleanLibvirtDomains)
+			withSpinner("Cleaning inactive libvirt domains...", "Inactive domains cleaned", cleanLibvirtDomains)
 		}
 
 	case strings.HasPrefix(selected, "6."):
-		ui.Warning("LIMPIEZA COMPLETA: Se eliminarán todas las VMs, boxes y recursos de libvirt")
-		ok, _ := pterm.DefaultInteractiveConfirm.Show("¿Estás COMPLETAMENTE seguro?")
+		ui.Warning("FULL CLEANUP: All VMs, boxes and libvirt resources will be removed")
+		ok, _ := pterm.DefaultInteractiveConfirm.Show("Are you COMPLETELY sure?")
 		if !ok {
-			ui.Info("Operación cancelada")
+			ui.Info("Operation cancelled")
 			return nil
 		}
 
@@ -114,43 +114,43 @@ func runVagrantCleanup(cmd *cobra.Command, args []string) error {
 		if libvirtInstalled {
 			steps = 5
 		}
-		pb, _ := pterm.DefaultProgressbar.WithTotal(steps).WithTitle("Limpieza completa").Start()
+		pb, _ := pterm.DefaultProgressbar.WithTotal(steps).WithTitle("Full cleanup").Start()
 
-		pb.UpdateTitle("Destruyendo VMs de Vagrant...")
+		pb.UpdateTitle("Destroying Vagrant VMs...")
 		destroyAllVMs()
 		pb.Increment()
 
-		pb.UpdateTitle("Eliminando boxes de Vagrant...")
+		pb.UpdateTitle("Removing Vagrant boxes...")
 		removeAllBoxes()
 		pb.Increment()
 
 		if libvirtInstalled {
-			pb.UpdateTitle("Limpiando dominios de libvirt...")
+			pb.UpdateTitle("Cleaning libvirt domains...")
 			cleanLibvirtDomainsForce()
 			pb.Increment()
 
-			pb.UpdateTitle("Limpiando volúmenes de libvirt...")
+			pb.UpdateTitle("Cleaning libvirt volumes...")
 			cleanLibvirtVolumes()
 			pb.Increment()
 
-			pb.UpdateTitle("Limpiando redes de libvirt...")
+			pb.UpdateTitle("Cleaning libvirt networks...")
 			cleanLibvirtNetworks()
 			pb.Increment()
 		}
 
-		pb.UpdateTitle("Limpiando directorio temporal de Vagrant...")
+		pb.UpdateTitle("Cleaning Vagrant temp directory...")
 		os.RemoveAll(os.Getenv("HOME") + "/.vagrant.d/tmp")
 
 		_, _ = pb.Stop()
-		ui.Success("¡Limpieza completa finalizada!")
+		ui.Success("Full cleanup complete!")
 
 	case strings.HasPrefix(selected, "7."):
-		ui.Info("Saliendo...")
+		ui.Info("Exiting...")
 		return nil
 	}
 
 	fmt.Println()
-	ui.Success("Script finalizado")
+	ui.Success("Done")
 	return nil
 }
 
@@ -161,22 +161,22 @@ func withSpinner(start, done string, fn func()) {
 }
 
 func showCurrentState(libvirtInstalled bool) {
-	pterm.DefaultSection.Println("Estado Actual")
+	pterm.DefaultSection.Println("Current State")
 
-	ui.Info("Máquinas virtuales de Vagrant:")
+	ui.Info("Vagrant virtual machines:")
 	runCmd("vagrant", "global-status", "--prune")
 	fmt.Println()
 
-	ui.Info("Boxes de Vagrant instalados:")
+	ui.Info("Installed Vagrant boxes:")
 	runCmd("vagrant", "box", "list")
 	fmt.Println()
 
 	if libvirtInstalled {
-		ui.Info("Dominios de libvirt:")
+		ui.Info("Libvirt domains:")
 		runCmd("virsh", "-c", "qemu:///system", "list", "--all")
 		fmt.Println()
 
-		ui.Info("Volúmenes en pool default:")
+		ui.Info("Volumes in default pool:")
 		runCmd("virsh", "-c", "qemu:///system", "vol-list", "default")
 		fmt.Println()
 	}
