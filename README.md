@@ -1,75 +1,86 @@
-# devtool-cli
+# 🛠️ devtool-cli
 
-CLI de herramientas de desarrollo. Migración a Go de scripts de shell para gestión de procesos VS Code Server y limpieza de entornos Vagrant/libvirt.
+> A Go-based developer CLI for managing VS Code Server orphan processes and cleaning up Vagrant/libvirt environments — with an interactive terminal UI.
 
-## Requisitos
+---
 
-- Docker (para compilar desde el host)
-- `sudo` (para instalar en `/usr/local/bin`)
+## 📋 Requirements
 
-## Instalación
+- 🐳 **Docker** — to compile from the host without installing Go
+- 🔐 **sudo** — to install into `/usr/local/bin`
 
-Desde el directorio del proyecto en el **host** (no es necesario entrar al devcontainer):
+---
+
+## 🚀 Installation
+
+From the project directory on the **host** (no need to enter the devcontainer):
 
 ```bash
 make install
 ```
 
-Esto compila el binario usando un contenedor Go efímero y lo instala en `/usr/local/bin/devtool`.
+This compiles the binary using an ephemeral Go container and installs it at `/usr/local/bin/devtool`.
 
-> La primera ejecución descarga la imagen de Go y las dependencias. Las siguientes son rápidas gracias al volumen de caché `devtool-gomodcache`.
+> 💡 The first run pulls the Go image and downloads dependencies. Subsequent builds are fast thanks to the `devtool-gomodcache` named volume.
 
-## Desinstalación
+### 🗑️ Uninstall
 
 ```bash
 make uninstall
 ```
 
-## Uso
+---
 
-### `devtool vscode kill`
+## 📖 Usage
 
-Busca y termina procesos huérfanos de VS Code Remote SSH para el usuario actual.
+### 💻 `devtool vscode kill`
+
+Finds and terminates orphan VS Code Remote SSH processes for the current user.
 
 ```bash
 devtool vscode kill
 ```
 
-Flujo:
-1. Muestra un spinner mientras busca procesos de `.vscode-server`
-2. Lista los procesos encontrados en una tabla (PID, %CPU, %MEM, comando)
-3. Pide confirmación antes de actuar
-4. Envía `SIGTERM`; si algún proceso resiste, envía `SIGKILL`
+**Execution flow:**
 
-### `devtool vagrant cleanup`
+1. 🔍 Spinner while searching for `.vscode-server` processes
+2. 📊 Table listing found processes (PID, %CPU, %MEM, command)
+3. ❓ Interactive confirmation before taking action
+4. ⚡ Sends `SIGTERM` — escalates to `SIGKILL` if any process resists
 
-Muestra el estado actual de VMs, boxes y recursos de libvirt, y ofrece un menú interactivo de limpieza.
+---
+
+### 📦 `devtool vagrant cleanup`
+
+Displays the current state of VMs, boxes, and libvirt resources, then offers an interactive cleanup menu.
 
 ```bash
 devtool vagrant cleanup
 ```
 
-Opciones del menú (navegación con flechas ↑↓):
+**Menu options** (navigate with ↑↓ arrows):
 
-| Opción | Acción |
-|--------|--------|
-| 1 | Destruir todas las VMs de Vagrant |
-| 2 | Eliminar boxes no utilizados (`vagrant box prune`) |
-| 3 | Eliminar **todos** los boxes |
-| 4 | Limpiar volúmenes huérfanos de libvirt |
-| 5 | Limpiar dominios inactivos de libvirt |
-| 6 | Limpieza completa con barra de progreso |
-| 7 | Salir |
+| # | Action |
+|---|--------|
+| 1️⃣ | Destroy all Vagrant VMs |
+| 2️⃣ | Remove unused Vagrant boxes (`vagrant box prune`) |
+| 3️⃣ | Remove **all** Vagrant boxes |
+| 4️⃣ | Clean orphan libvirt volumes |
+| 5️⃣ | Clean inactive libvirt domains |
+| 6️⃣ | 🧹 Full cleanup with progress bar |
+| 7️⃣ | Exit |
 
-> Las opciones 4 y 5 requieren `virsh` instalado en el sistema.
+> ⚠️ Options 4 and 5 require `virsh` to be installed on the system.
 
-## Desarrollo
+---
 
-Targets disponibles dentro del devcontainer:
+## 🧑‍💻 Development
+
+Available targets **inside the devcontainer**:
 
 ```bash
-make build          # Compila ./devtool localmente
-make run ARGS="vscode kill"  # Ejecuta sin compilar
-make lint           # Corre golangci-lint
-make clean          # Elimina el binario local
+make build                   # Compile ./devtool locally
+make run ARGS="vscode kill"  # Run without compiling
+make lint                    # Run golangci-lint
+make clean                   # Remove local binary
 ```

@@ -67,7 +67,7 @@ func runVSCodeKill(cmd *cobra.Command, args []string) error {
 	killSpinner, _ := pterm.DefaultSpinner.Start("Terminando procesos con SIGTERM...")
 	for _, pid := range pids {
 		if p, err := os.FindProcess(pid); err == nil {
-			p.Signal(syscall.SIGTERM)
+			_ = p.Signal(syscall.SIGTERM)
 		}
 	}
 	time.Sleep(time.Second)
@@ -83,7 +83,7 @@ func runVSCodeKill(cmd *cobra.Command, args []string) error {
 		killSpinner.Warning("Algunos procesos resistieron SIGTERM, usando SIGKILL...")
 		for _, pid := range remaining {
 			if p, err := os.FindProcess(pid); err == nil {
-				p.Signal(syscall.SIGKILL)
+				_ = p.Signal(syscall.SIGKILL)
 			}
 		}
 	}
@@ -138,7 +138,7 @@ func printProcessTable(pids []int) {
 		}
 	}
 
-	pterm.DefaultTable.WithHasHeader().WithData(tableData).Render()
+	_ = pterm.DefaultTable.WithHasHeader().WithData(tableData).Render()
 }
 
 func processExists(pid int) bool {

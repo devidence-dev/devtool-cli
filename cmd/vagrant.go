@@ -141,7 +141,7 @@ func runVagrantCleanup(cmd *cobra.Command, args []string) error {
 		pb.UpdateTitle("Limpiando directorio temporal de Vagrant...")
 		os.RemoveAll(os.Getenv("HOME") + "/.vagrant.d/tmp")
 
-		pb.Stop()
+		_, _ = pb.Stop()
 		ui.Success("¡Limpieza completa finalizada!")
 
 	case strings.HasPrefix(selected, "7."):
@@ -289,5 +289,5 @@ func runCmd(name string, args ...string) {
 	cmd := exec.Command(name, args...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	cmd.Run()
+	_ = cmd.Run()
 }
