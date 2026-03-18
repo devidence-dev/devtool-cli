@@ -30,7 +30,6 @@ func runVagrantCleanup(cmd *cobra.Command, args []string) error {
 	pterm.DefaultHeader.
 		WithBackgroundStyle(pterm.NewStyle(pterm.BgBlue)).
 		WithTextStyle(pterm.NewStyle(pterm.Bold)).
-		WithFullWidth().
 		Println("Vagrant & Libvirt Cleanup")
 
 	if !commandExists("vagrant") {

@@ -35,7 +35,6 @@ func runVSCodeKill(cmd *cobra.Command, args []string) error {
 	pterm.DefaultHeader.
 		WithBackgroundStyle(pterm.NewStyle(pterm.BgCyan)).
 		WithTextStyle(pterm.NewStyle(pterm.Bold)).
-		WithFullWidth().
 		Println("VS Code Server Process Killer")
 
 	user := os.Getenv("USER")
@@ -51,11 +50,13 @@ func runVSCodeKill(cmd *cobra.Command, args []string) error {
 		spinner.Success("No VS Code Server processes found")
 		return nil
 	}
-	spinner.Success(fmt.Sprintf("%d process(es) found", len(pids)))
+	spinner.Stop()
 	fmt.Println()
 
 	printProcessTable(pids)
 	fmt.Println()
+
+	ui.Success(fmt.Sprintf("%d process(es) found", len(pids)))
 
 	ok, _ := pterm.DefaultInteractiveConfirm.Show("Kill these processes?")
 	if !ok {
