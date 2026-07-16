@@ -1,0 +1,47 @@
+{
+  ".devcontainer/devcontainer.json": {
+    "mtime": 1773719483.9668295,
+    "ast_hash": "51dc2bfc3f1f6e87a4d1a595e3ce3bac",
+    "semantic_hash": "51dc2bfc3f1f6e87a4d1a595e3ce3bac"
+  },
+  "cmd/root.go": {
+    "mtime": 1773780650.585727,
+    "ast_hash": "ee0d6ef3b61be9712e37a4935fcbde96",
+    "semantic_hash": "ee0d6ef3b61be9712e37a4935fcbde96"
+  },
+  "cmd/vagrant.go": {
+    "mtime": 1773783829.4914346,
+    "ast_hash": "a228763fb213f629a4bd327b5fc2ccd8",
+    "semantic_hash": "a228763fb213f629a4bd327b5fc2ccd8"
+  },
+  "cmd/vscode.go": {
+    "mtime": 1773784618.0656,
+    "ast_hash": "c0a231c3834aa6f8fd1044677d4d5289",
+    "semantic_hash": "c0a231c3834aa6f8fd1044677d4d5289"
+  },
+  "go.mod": {
+    "mtime": 1773720159.1770191,
+    "ast_hash": "2c3302ba886dbd8dfc11ec6cc97f06a3",
+    "semantic_hash": "2c3302ba886dbd8dfc11ec6cc97f06a3"
+  },
+  "internal/ui/printer.go": {
+    "mtime": 1773785392.0169806,
+    "ast_hash": "8aef5260e6ceb74f4d19a32f2d0491a3",
+    "semantic_hash": "8aef5260e6ceb74f4d19a32f2d0491a3"
+  },
+  "main.go": {
+    "mtime": 1773719888.191409,
+    "ast_hash": "02f9004eddc5d4d7a353eeff547972be",
+    "semantic_hash": "02f9004eddc5d4d7a353eeff547972be"
+  },
+  "CLAUDE.md": {
+    "mtime": 1784163343.0511026,
+    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "semantic_hash": "82efb97a359f5c7290bf2513d14686be"
+  },
+  "README.md": {
+    "mtime": 1773721241.2713747,
+    "ast_hash": "dba5e52c6b151e3b4aefac69ccf316a3",
+    "semantic_hash": "dba5e52c6b151e3b4aefac69ccf316a3"
+  }
+}
