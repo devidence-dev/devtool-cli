@@ -38,371 +38,6 @@
   },
   "nodes": [
     {
-      "label": "root.go",
-      "file_type": "code",
-      "source_file": "cmd/root.go",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "cmd_root",
-      "community": 6,
-      "community_name": "CLI Root Entrypoint",
-      "norm_label": "root.go"
-    },
-    {
-      "label": "Execute()",
-      "file_type": "code",
-      "source_file": "cmd/root.go",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "cmd_root_execute",
-      "community": 6,
-      "community_name": "CLI Root Entrypoint",
-      "norm_label": "execute()"
-    },
-    {
-      "label": "init()",
-      "file_type": "code",
-      "source_file": "cmd/root.go",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "cmd_root_init",
-      "community": 6,
-      "community_name": "CLI Root Entrypoint",
-      "norm_label": "init()"
-    },
-    {
-      "label": "vagrant.go",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "cmd_vagrant",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "vagrant.go"
-    },
-    {
-      "label": "init()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "cmd_vagrant_init",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "init()"
-    },
-    {
-      "label": "runVagrantCleanup()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "cmd_vagrant_runvagrantcleanup",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "runvagrantcleanup()"
-    },
-    {
-      "label": "Command",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "cmd_vagrant_go_command",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "command"
-    },
-    {
-      "label": "withSpinner()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L156",
-      "_origin": "ast",
-      "id": "cmd_vagrant_withspinner",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "withspinner()"
-    },
-    {
-      "label": "showCurrentState()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L162",
-      "_origin": "ast",
-      "id": "cmd_vagrant_showcurrentstate",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "showcurrentstate()"
-    },
-    {
-      "label": "destroyAllVMs()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L184",
-      "_origin": "ast",
-      "id": "cmd_vagrant_destroyallvms",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "destroyallvms()"
-    },
-    {
-      "label": "removeAllBoxes()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L199",
-      "_origin": "ast",
-      "id": "cmd_vagrant_removeallboxes",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "removeallboxes()"
-    },
-    {
-      "label": "cleanLibvirtVolumes()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L216",
-      "_origin": "ast",
-      "id": "cmd_vagrant_cleanlibvirtvolumes",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "cleanlibvirtvolumes()"
-    },
-    {
-      "label": "cleanLibvirtDomains()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L232",
-      "_origin": "ast",
-      "id": "cmd_vagrant_cleanlibvirtdomains",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "cleanlibvirtdomains()"
-    },
-    {
-      "label": "cleanLibvirtDomainsForce()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L248",
-      "_origin": "ast",
-      "id": "cmd_vagrant_cleanlibvirtdomainsforce",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "cleanlibvirtdomainsforce()"
-    },
-    {
-      "label": "cleanLibvirtNetworks()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L265",
-      "_origin": "ast",
-      "id": "cmd_vagrant_cleanlibvirtnetworks",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "cleanlibvirtnetworks()"
-    },
-    {
-      "label": "commandExists()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L282",
-      "_origin": "ast",
-      "id": "cmd_vagrant_commandexists",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "commandexists()"
-    },
-    {
-      "label": "runCmd()",
-      "file_type": "code",
-      "source_file": "cmd/vagrant.go",
-      "source_location": "L287",
-      "_origin": "ast",
-      "id": "cmd_vagrant_runcmd",
-      "community": 0,
-      "community_name": "Vagrant Cleanup Command",
-      "norm_label": "runcmd()"
-    },
-    {
-      "label": "vscode.go",
-      "file_type": "code",
-      "source_file": "cmd/vscode.go",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "cmd_vscode",
-      "community": 4,
-      "community_name": "VSCode Kill Command",
-      "norm_label": "vscode.go"
-    },
-    {
-      "label": "init()",
-      "file_type": "code",
-      "source_file": "cmd/vscode.go",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "cmd_vscode_init",
-      "community": 4,
-      "community_name": "VSCode Kill Command",
-      "norm_label": "init()"
-    },
-    {
-      "label": "runVSCodeKill()",
-      "file_type": "code",
-      "source_file": "cmd/vscode.go",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "cmd_vscode_runvscodekill",
-      "community": 4,
-      "community_name": "VSCode Kill Command",
-      "norm_label": "runvscodekill()"
-    },
-    {
-      "label": "Command",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "cmd_vscode_go_command",
-      "community": 4,
-      "community_name": "VSCode Kill Command",
-      "norm_label": "command"
-    },
-    {
-      "label": "findVSCodePIDs()",
-      "file_type": "code",
-      "source_file": "cmd/vscode.go",
-      "source_location": "L96",
-      "_origin": "ast",
-      "id": "cmd_vscode_findvscodepids",
-      "community": 4,
-      "community_name": "VSCode Kill Command",
-      "norm_label": "findvscodepids()"
-    },
-    {
-      "label": "printProcessTable()",
-      "file_type": "code",
-      "source_file": "cmd/vscode.go",
-      "source_location": "L124",
-      "_origin": "ast",
-      "id": "cmd_vscode_printprocesstable",
-      "community": 4,
-      "community_name": "VSCode Kill Command",
-      "norm_label": "printprocesstable()"
-    },
-    {
-      "label": "processExists()",
-      "file_type": "code",
-      "source_file": "cmd/vscode.go",
-      "source_location": "L145",
-      "_origin": "ast",
-      "id": "cmd_vscode_processexists",
-      "community": 4,
-      "community_name": "VSCode Kill Command",
-      "norm_label": "processexists()"
-    },
-    {
-      "label": "github.com/pxblo-x1/devtool-cli",
-      "file_type": "code",
-      "type": "package",
-      "ecosystem": "go",
-      "source_file": "go.mod",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "pkg_github_com_pxblo_x1_devtool_cli",
-      "community": 7,
-      "community_name": "Go Module Path",
-      "norm_label": "github.com/pxblo-x1/devtool-cli"
-    },
-    {
-      "label": "printer.go",
-      "file_type": "code",
-      "source_file": "internal/ui/printer.go",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "internal_ui_printer",
-      "community": 5,
-      "community_name": "UI Printer Utilities",
-      "norm_label": "printer.go"
-    },
-    {
-      "label": "init()",
-      "file_type": "code",
-      "source_file": "internal/ui/printer.go",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "internal_ui_printer_init",
-      "community": 5,
-      "community_name": "UI Printer Utilities",
-      "norm_label": "init()"
-    },
-    {
-      "label": "Info()",
-      "file_type": "code",
-      "source_file": "internal/ui/printer.go",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "internal_ui_printer_info",
-      "community": 5,
-      "community_name": "UI Printer Utilities",
-      "norm_label": "info()"
-    },
-    {
-      "label": "Success()",
-      "file_type": "code",
-      "source_file": "internal/ui/printer.go",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "internal_ui_printer_success",
-      "community": 5,
-      "community_name": "UI Printer Utilities",
-      "norm_label": "success()"
-    },
-    {
-      "label": "Warning()",
-      "file_type": "code",
-      "source_file": "internal/ui/printer.go",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "internal_ui_printer_warning",
-      "community": 5,
-      "community_name": "UI Printer Utilities",
-      "norm_label": "warning()"
-    },
-    {
-      "label": "Error()",
-      "file_type": "code",
-      "source_file": "internal/ui/printer.go",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "internal_ui_printer_error",
-      "community": 5,
-      "community_name": "UI Printer Utilities",
-      "norm_label": "error()"
-    },
-    {
-      "label": "main.go",
-      "file_type": "code",
-      "source_file": "main.go",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "main",
-      "community": 6,
-      "community_name": "CLI Root Entrypoint",
-      "norm_label": "main.go"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "main.go",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "main_main",
-      "community": 6,
-      "community_name": "CLI Root Entrypoint",
-      "norm_label": "main()"
-    },
-    {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
@@ -425,103 +60,411 @@
       "norm_label": "graphify"
     },
     {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
+      "label": "root.go",
+      "file_type": "code",
+      "source_file": "cmd/root.go",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme",
-      "community": 1,
-      "community_name": "README Build & Install Docs",
-      "norm_label": "readme.md"
+      "community": 6,
+      "norm_label": "root.go",
+      "id": "cmd_root",
+      "community_name": "CLI Root Entrypoint"
     },
     {
-      "label": "\ud83d\udee0\ufe0f devtool-cli",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
+      "label": "Execute()",
+      "file_type": "code",
+      "source_file": "cmd/root.go",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "readme_devtool_cli",
-      "community": 1,
-      "community_name": "README Build & Install Docs",
-      "norm_label": "\ud83d\udee0\ufe0f devtool-cli"
+      "community": 6,
+      "norm_label": "execute()",
+      "id": "cmd_root_execute",
+      "community_name": "CLI Root Entrypoint"
     },
     {
-      "label": "\ud83d\udccb Requirements",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "readme_requirements",
-      "community": 1,
-      "community_name": "README Build & Install Docs",
-      "norm_label": "\ud83d\udccb requirements"
-    },
-    {
-      "label": "\ud83d\ude80 Installation",
-      "file_type": "document",
-      "source_file": "README.md",
+      "label": "init()",
+      "file_type": "code",
+      "source_file": "cmd/root.go",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "readme_installation",
-      "community": 8,
-      "community_name": "runCmd",
-      "norm_label": "\ud83d\ude80 installation"
+      "community": 6,
+      "norm_label": "init()",
+      "id": "cmd_root_init",
+      "community_name": "CLI Root Entrypoint"
     },
     {
-      "label": "\ud83d\uddd1\ufe0f Uninstall",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L26",
+      "label": "vagrant.go",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_uninstall",
-      "community": 8,
-      "community_name": "runCmd",
-      "norm_label": "\ud83d\uddd1\ufe0f uninstall"
+      "community": 0,
+      "norm_label": "vagrant.go",
+      "id": "cmd_vagrant",
+      "community_name": "Vagrant Cleanup Command"
     },
     {
-      "label": "\ud83d\udcd6 Usage",
-      "file_type": "document",
-      "source_file": "README.md",
+      "label": "init()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "init()",
+      "id": "cmd_vagrant_init",
+      "community_name": "Vagrant Cleanup Command"
+    },
+    {
+      "label": "runVagrantCleanup()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "runvagrantcleanup()",
+      "id": "cmd_vagrant_runvagrantcleanup",
+      "community_name": "Vagrant Cleanup Command"
+    },
+    {
+      "label": "Command",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "command",
+      "id": "cmd_vagrant_go_command",
+      "community_name": "runCmd"
+    },
+    {
+      "label": "withSpinner()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L156",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "withspinner()",
+      "id": "cmd_vagrant_withspinner",
+      "community_name": "Vagrant Cleanup Command"
+    },
+    {
+      "label": "showCurrentState()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L162",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "showcurrentstate()",
+      "id": "cmd_vagrant_showcurrentstate",
+      "community_name": "Vagrant Cleanup Command"
+    },
+    {
+      "label": "destroyAllVMs()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L184",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "destroyallvms()",
+      "id": "cmd_vagrant_destroyallvms",
+      "community_name": "runCmd"
+    },
+    {
+      "label": "removeAllBoxes()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L199",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "removeallboxes()",
+      "id": "cmd_vagrant_removeallboxes",
+      "community_name": "runCmd"
+    },
+    {
+      "label": "cleanLibvirtVolumes()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L216",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "cleanlibvirtvolumes()",
+      "id": "cmd_vagrant_cleanlibvirtvolumes",
+      "community_name": "runCmd"
+    },
+    {
+      "label": "cleanLibvirtDomains()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L232",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "cleanlibvirtdomains()",
+      "id": "cmd_vagrant_cleanlibvirtdomains",
+      "community_name": "runCmd"
+    },
+    {
+      "label": "cleanLibvirtDomainsForce()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L248",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "cleanlibvirtdomainsforce()",
+      "id": "cmd_vagrant_cleanlibvirtdomainsforce",
+      "community_name": "runCmd"
+    },
+    {
+      "label": "cleanLibvirtNetworks()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L265",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "cleanlibvirtnetworks()",
+      "id": "cmd_vagrant_cleanlibvirtnetworks",
+      "community_name": "Vagrant Cleanup Command"
+    },
+    {
+      "label": "commandExists()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L282",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "commandexists()",
+      "id": "cmd_vagrant_commandexists",
+      "community_name": "Vagrant Cleanup Command"
+    },
+    {
+      "label": "runCmd()",
+      "file_type": "code",
+      "source_file": "cmd/vagrant.go",
+      "source_location": "L287",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "runcmd()",
+      "id": "cmd_vagrant_runcmd",
+      "community_name": "runCmd"
+    },
+    {
+      "label": "vscode.go",
+      "file_type": "code",
+      "source_file": "cmd/vscode.go",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "vscode.go",
+      "id": "cmd_vscode",
+      "community_name": "VSCode Kill Command"
+    },
+    {
+      "label": "init()",
+      "file_type": "code",
+      "source_file": "cmd/vscode.go",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "init()",
+      "id": "cmd_vscode_init",
+      "community_name": "VSCode Kill Command"
+    },
+    {
+      "label": "runVSCodeKill()",
+      "file_type": "code",
+      "source_file": "cmd/vscode.go",
       "source_location": "L34",
       "_origin": "ast",
-      "id": "readme_usage",
-      "community": 1,
-      "community_name": "README Build & Install Docs",
-      "norm_label": "\ud83d\udcd6 usage"
+      "community": 4,
+      "norm_label": "runvscodekill()",
+      "id": "cmd_vscode_runvscodekill",
+      "community_name": "VSCode Kill Command"
     },
     {
-      "label": "\ud83d\udcbb `devtool vscode kill`",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L36",
+      "label": "Command",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast",
+      "community": 4,
+      "norm_label": "command",
+      "id": "cmd_vscode_go_command",
+      "community_name": "VSCode Kill Command"
+    },
+    {
+      "label": "findVSCodePIDs()",
+      "file_type": "code",
+      "source_file": "cmd/vscode.go",
+      "source_location": "L96",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "findvscodepids()",
+      "id": "cmd_vscode_findvscodepids",
+      "community_name": "VSCode Kill Command"
+    },
+    {
+      "label": "printProcessTable()",
+      "file_type": "code",
+      "source_file": "cmd/vscode.go",
+      "source_location": "L124",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "printprocesstable()",
+      "id": "cmd_vscode_printprocesstable",
+      "community_name": "VSCode Kill Command"
+    },
+    {
+      "label": "processExists()",
+      "file_type": "code",
+      "source_file": "cmd/vscode.go",
+      "source_location": "L145",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "processexists()",
+      "id": "cmd_vscode_processexists",
+      "community_name": "VSCode Kill Command"
+    },
+    {
+      "label": "github.com/pxblo-x1/devtool-cli",
+      "file_type": "code",
+      "type": "package",
+      "ecosystem": "go",
+      "source_file": "go.mod",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "github.com/pxblo-x1/devtool-cli",
+      "id": "pkg_github_com_pxblo_x1_devtool_cli",
+      "community_name": "Go Module Path"
+    },
+    {
+      "label": "printer.go",
+      "file_type": "code",
+      "source_file": "internal/ui/printer.go",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "printer.go",
+      "id": "internal_ui_printer",
+      "community_name": "UI Printer Utilities"
+    },
+    {
+      "label": "init()",
+      "file_type": "code",
+      "source_file": "internal/ui/printer.go",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "init()",
+      "id": "internal_ui_printer_init",
+      "community_name": "UI Printer Utilities"
+    },
+    {
+      "label": "Info()",
+      "file_type": "code",
+      "source_file": "internal/ui/printer.go",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "info()",
+      "id": "internal_ui_printer_info",
+      "community_name": "UI Printer Utilities"
+    },
+    {
+      "label": "Success()",
+      "file_type": "code",
+      "source_file": "internal/ui/printer.go",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "success()",
+      "id": "internal_ui_printer_success",
+      "community_name": "UI Printer Utilities"
+    },
+    {
+      "label": "Warning()",
+      "file_type": "code",
+      "source_file": "internal/ui/printer.go",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "warning()",
+      "id": "internal_ui_printer_warning",
+      "community_name": "UI Printer Utilities"
+    },
+    {
+      "label": "Error()",
+      "file_type": "code",
+      "source_file": "internal/ui/printer.go",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "error()",
+      "id": "internal_ui_printer_error",
+      "community_name": "UI Printer Utilities"
+    },
+    {
+      "label": "main.go",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "main.go",
+      "id": "main",
+      "community_name": "CLI Root Entrypoint"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main.go",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "main()",
+      "id": "main_main",
+      "community_name": "CLI Root Entrypoint"
+    },
+    {
+      "label": "devtool-cli (Go developer CLI)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "devtool-cli (go developer cli)",
+      "id": "readme_devtool_cli",
+      "community_name": "README Build & Install Docs"
+    },
+    {
+      "label": "devtool vscode kill",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "devtool vscode kill",
       "id": "readme_devtool_vscode_kill",
-      "community": 1,
-      "community_name": "README Build & Install Docs",
-      "norm_label": "\ud83d\udcbb `devtool vscode kill`"
+      "community_name": "README Build & Install Docs"
     },
     {
-      "label": "\ud83d\udce6 `devtool vagrant cleanup`",
-      "file_type": "document",
+      "label": "devtool vagrant cleanup",
+      "file_type": "concept",
       "source_file": "README.md",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "readme_devtool_vagrant_cleanup",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
       "community": 3,
-      "community_name": "Vagrant Cleanup Menu",
-      "norm_label": "\ud83d\udce6 `devtool vagrant cleanup`"
-    },
-    {
-      "label": "\ud83e\uddd1\u200d\ud83d\udcbb Development",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L77",
-      "_origin": "ast",
-      "id": "readme_development",
-      "community": 1,
-      "community_name": "README Build & Install Docs",
-      "norm_label": "\ud83e\uddd1\u200d\ud83d\udcbb development"
+      "norm_label": "devtool vagrant cleanup",
+      "id": "readme_devtool_vagrant_cleanup",
+      "community_name": "Vagrant Cleanup Menu"
     },
     {
       "label": "make install",
@@ -534,8 +477,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "make install",
-      "community_name": "make install",
-      "id": "readme_make_install"
+      "id": "readme_make_install",
+      "community_name": "make install"
     },
     {
       "label": "make uninstall",
@@ -548,8 +491,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "make uninstall",
-      "community_name": "make install",
-      "id": "readme_make_uninstall"
+      "id": "readme_make_uninstall",
+      "community_name": "make install"
     },
     {
       "label": "make build",
@@ -562,8 +505,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "make build",
-      "community_name": "README Build & Install Docs",
-      "id": "readme_make_build"
+      "id": "readme_make_build",
+      "community_name": "README Build & Install Docs"
     },
     {
       "label": "make run ARGS=\"vscode kill\"",
@@ -576,8 +519,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "make run args=\"vscode kill\"",
-      "community_name": "README Build & Install Docs",
-      "id": "readme_make_run"
+      "id": "readme_make_run",
+      "community_name": "README Build & Install Docs"
     },
     {
       "label": "make lint",
@@ -590,8 +533,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "make lint",
-      "community_name": "make lint",
-      "id": "readme_make_lint"
+      "id": "readme_make_lint",
+      "community_name": "make lint"
     },
     {
       "label": "make clean",
@@ -604,8 +547,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "make clean",
-      "community_name": "README Build & Install Docs",
-      "id": "readme_make_clean"
+      "id": "readme_make_clean",
+      "community_name": "README Build & Install Docs"
     },
     {
       "label": "Docker (build dependency)",
@@ -618,8 +561,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "docker (build dependency)",
-      "community_name": "make install",
-      "id": "readme_docker"
+      "id": "readme_docker",
+      "community_name": "make install"
     },
     {
       "label": "sudo (install dependency)",
@@ -632,8 +575,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "sudo (install dependency)",
-      "community_name": "make install",
-      "id": "readme_sudo"
+      "id": "readme_sudo",
+      "community_name": "make install"
     },
     {
       "label": "devtool-gomodcache named volume",
@@ -646,8 +589,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "devtool-gomodcache named volume",
-      "community_name": "make install",
-      "id": "readme_devtool_gomodcache"
+      "id": "readme_devtool_gomodcache",
+      "community_name": "make install"
     },
     {
       "label": "virsh (libvirt CLI dependency)",
@@ -660,8 +603,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "virsh (libvirt cli dependency)",
-      "community_name": "Vagrant Cleanup Menu",
-      "id": "readme_virsh"
+      "id": "readme_virsh",
+      "community_name": "Vagrant Cleanup Menu"
     },
     {
       "label": "golangci-lint",
@@ -674,8 +617,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "golangci-lint",
-      "community_name": "make lint",
-      "id": "readme_golangci_lint"
+      "id": "readme_golangci_lint",
+      "community_name": "make lint"
     },
     {
       "label": "Menu option: Destroy all Vagrant VMs",
@@ -688,8 +631,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "menu option: destroy all vagrant vms",
-      "community_name": "Vagrant Cleanup Menu",
-      "id": "readme_menu_destroy_vms"
+      "id": "readme_menu_destroy_vms",
+      "community_name": "Vagrant Cleanup Menu"
     },
     {
       "label": "Menu option: Remove unused Vagrant boxes (vagrant box prune)",
@@ -702,8 +645,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "menu option: remove unused vagrant boxes (vagrant box prune)",
-      "community_name": "Vagrant Cleanup Menu",
-      "id": "readme_menu_prune_boxes"
+      "id": "readme_menu_prune_boxes",
+      "community_name": "Vagrant Cleanup Menu"
     },
     {
       "label": "Menu option: Remove all Vagrant boxes",
@@ -716,8 +659,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "menu option: remove all vagrant boxes",
-      "community_name": "Vagrant Cleanup Menu",
-      "id": "readme_menu_remove_all_boxes"
+      "id": "readme_menu_remove_all_boxes",
+      "community_name": "Vagrant Cleanup Menu"
     },
     {
       "label": "Menu option: Clean orphan libvirt volumes",
@@ -730,8 +673,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "menu option: clean orphan libvirt volumes",
-      "community_name": "Vagrant Cleanup Menu",
-      "id": "readme_menu_clean_orphan_volumes"
+      "id": "readme_menu_clean_orphan_volumes",
+      "community_name": "Vagrant Cleanup Menu"
     },
     {
       "label": "Menu option: Clean inactive libvirt domains",
@@ -744,8 +687,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "menu option: clean inactive libvirt domains",
-      "community_name": "Vagrant Cleanup Menu",
-      "id": "readme_menu_clean_inactive_domains"
+      "id": "readme_menu_clean_inactive_domains",
+      "community_name": "Vagrant Cleanup Menu"
     },
     {
       "label": "Menu option: Full cleanup with progress bar",
@@ -758,11 +701,32 @@
       "contributor": null,
       "community": 3,
       "norm_label": "menu option: full cleanup with progress bar",
-      "community_name": "Vagrant Cleanup Menu",
-      "id": "readme_menu_full_cleanup"
+      "id": "readme_menu_full_cleanup",
+      "community_name": "Vagrant Cleanup Menu"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude",
+      "target": "claude_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_graphify",
+      "target": "readme_devtool_cli"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -770,9 +734,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_root",
-      "target": "cmd_root_execute",
-      "confidence_score": 1.0
+      "target": "cmd_root_execute"
     },
     {
       "relation": "contains",
@@ -781,9 +745,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_root",
-      "target": "cmd_root_init",
-      "confidence_score": 1.0
+      "target": "cmd_root_init"
     },
     {
       "relation": "calls",
@@ -804,9 +768,9 @@
       "source_location": "L232",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_cleanlibvirtdomains",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_cleanlibvirtdomains"
     },
     {
       "relation": "contains",
@@ -815,9 +779,9 @@
       "source_location": "L248",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_cleanlibvirtdomainsforce",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_cleanlibvirtdomainsforce"
     },
     {
       "relation": "contains",
@@ -826,9 +790,9 @@
       "source_location": "L265",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_cleanlibvirtnetworks",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_cleanlibvirtnetworks"
     },
     {
       "relation": "contains",
@@ -837,9 +801,9 @@
       "source_location": "L216",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_cleanlibvirtvolumes",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_cleanlibvirtvolumes"
     },
     {
       "relation": "contains",
@@ -848,9 +812,9 @@
       "source_location": "L282",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_commandexists",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_commandexists"
     },
     {
       "relation": "contains",
@@ -859,9 +823,9 @@
       "source_location": "L184",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_destroyallvms",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_destroyallvms"
     },
     {
       "relation": "contains",
@@ -870,9 +834,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_init",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_init"
     },
     {
       "relation": "contains",
@@ -881,9 +845,9 @@
       "source_location": "L199",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_removeallboxes",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_removeallboxes"
     },
     {
       "relation": "contains",
@@ -892,9 +856,9 @@
       "source_location": "L287",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "contains",
@@ -903,9 +867,9 @@
       "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_runvagrantcleanup",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runvagrantcleanup"
     },
     {
       "relation": "contains",
@@ -914,9 +878,9 @@
       "source_location": "L162",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_showcurrentstate",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_showcurrentstate"
     },
     {
       "relation": "contains",
@@ -925,9 +889,9 @@
       "source_location": "L156",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant",
-      "target": "cmd_vagrant_withspinner",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_withspinner"
     },
     {
       "relation": "calls",
@@ -937,9 +901,9 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_cleanlibvirtdomainsforce",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_cleanlibvirtdomainsforce"
     },
     {
       "relation": "calls",
@@ -949,9 +913,9 @@
       "source_location": "L136",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_cleanlibvirtnetworks",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_cleanlibvirtnetworks"
     },
     {
       "relation": "calls",
@@ -961,9 +925,9 @@
       "source_location": "L132",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_cleanlibvirtvolumes",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_cleanlibvirtvolumes"
     },
     {
       "relation": "calls",
@@ -973,9 +937,9 @@
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_commandexists",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_commandexists"
     },
     {
       "relation": "calls",
@@ -985,9 +949,9 @@
       "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_destroyallvms",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_destroyallvms"
     },
     {
       "relation": "references",
@@ -997,9 +961,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_go_command"
     },
     {
       "relation": "calls",
@@ -1009,9 +973,9 @@
       "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_removeallboxes",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_removeallboxes"
     },
     {
       "relation": "calls",
@@ -1021,9 +985,9 @@
       "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "calls",
@@ -1033,9 +997,9 @@
       "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_showcurrentstate",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_showcurrentstate"
     },
     {
       "relation": "calls",
@@ -1045,9 +1009,9 @@
       "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runvagrantcleanup",
-      "target": "cmd_vagrant_withspinner",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_withspinner"
     },
     {
       "relation": "calls",
@@ -1093,9 +1057,9 @@
       "source_location": "L233",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_cleanlibvirtdomains",
-      "target": "cmd_vagrant_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_go_command"
     },
     {
       "relation": "calls",
@@ -1105,9 +1069,9 @@
       "source_location": "L249",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_cleanlibvirtdomainsforce",
-      "target": "cmd_vagrant_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_go_command"
     },
     {
       "relation": "calls",
@@ -1117,9 +1081,9 @@
       "source_location": "L266",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_cleanlibvirtnetworks",
-      "target": "cmd_vagrant_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_go_command"
     },
     {
       "relation": "calls",
@@ -1129,9 +1093,9 @@
       "source_location": "L217",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_cleanlibvirtvolumes",
-      "target": "cmd_vagrant_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_go_command"
     },
     {
       "relation": "calls",
@@ -1141,9 +1105,9 @@
       "source_location": "L185",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_destroyallvms",
-      "target": "cmd_vagrant_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_go_command"
     },
     {
       "relation": "calls",
@@ -1153,9 +1117,9 @@
       "source_location": "L200",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_removeallboxes",
-      "target": "cmd_vagrant_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_go_command"
     },
     {
       "relation": "calls",
@@ -1165,9 +1129,9 @@
       "source_location": "L288",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_runcmd",
-      "target": "cmd_vagrant_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_go_command"
     },
     {
       "relation": "calls",
@@ -1177,9 +1141,9 @@
       "source_location": "L166",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_showcurrentstate",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "calls",
@@ -1201,9 +1165,9 @@
       "source_location": "L193",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_destroyallvms",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "calls",
@@ -1213,9 +1177,9 @@
       "source_location": "L211",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_removeallboxes",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "calls",
@@ -1225,9 +1189,9 @@
       "source_location": "L227",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_cleanlibvirtvolumes",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "calls",
@@ -1237,9 +1201,9 @@
       "source_location": "L243",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_cleanlibvirtdomains",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "calls",
@@ -1249,9 +1213,9 @@
       "source_location": "L259",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_cleanlibvirtdomainsforce",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "calls",
@@ -1261,9 +1225,9 @@
       "source_location": "L276",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vagrant_cleanlibvirtnetworks",
-      "target": "cmd_vagrant_runcmd",
-      "confidence_score": 1.0
+      "target": "cmd_vagrant_runcmd"
     },
     {
       "relation": "contains",
@@ -1272,9 +1236,9 @@
       "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode",
-      "target": "cmd_vscode_findvscodepids",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_findvscodepids"
     },
     {
       "relation": "contains",
@@ -1283,9 +1247,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode",
-      "target": "cmd_vscode_init",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_init"
     },
     {
       "relation": "contains",
@@ -1294,9 +1258,9 @@
       "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode",
-      "target": "cmd_vscode_printprocesstable",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_printprocesstable"
     },
     {
       "relation": "contains",
@@ -1305,9 +1269,9 @@
       "source_location": "L145",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode",
-      "target": "cmd_vscode_processexists",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_processexists"
     },
     {
       "relation": "contains",
@@ -1316,9 +1280,9 @@
       "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode",
-      "target": "cmd_vscode_runvscodekill",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_runvscodekill"
     },
     {
       "relation": "calls",
@@ -1328,9 +1292,9 @@
       "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode_runvscodekill",
-      "target": "cmd_vscode_findvscodepids",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_findvscodepids"
     },
     {
       "relation": "references",
@@ -1340,9 +1304,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode_runvscodekill",
-      "target": "cmd_vscode_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_go_command"
     },
     {
       "relation": "calls",
@@ -1352,9 +1316,9 @@
       "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode_runvscodekill",
-      "target": "cmd_vscode_printprocesstable",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_printprocesstable"
     },
     {
       "relation": "calls",
@@ -1364,9 +1328,9 @@
       "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode_runvscodekill",
-      "target": "cmd_vscode_processexists",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_processexists"
     },
     {
       "relation": "calls",
@@ -1400,9 +1364,9 @@
       "source_location": "L97",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode_findvscodepids",
-      "target": "cmd_vscode_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_go_command"
     },
     {
       "relation": "calls",
@@ -1412,9 +1376,9 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cmd_vscode_printprocesstable",
-      "target": "cmd_vscode_go_command",
-      "confidence_score": 1.0
+      "target": "cmd_vscode_go_command"
     },
     {
       "relation": "contains",
@@ -1423,9 +1387,9 @@
       "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "internal_ui_printer",
-      "target": "internal_ui_printer_error",
-      "confidence_score": 1.0
+      "target": "internal_ui_printer_error"
     },
     {
       "relation": "contains",
@@ -1434,9 +1398,9 @@
       "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "internal_ui_printer",
-      "target": "internal_ui_printer_info",
-      "confidence_score": 1.0
+      "target": "internal_ui_printer_info"
     },
     {
       "relation": "contains",
@@ -1445,9 +1409,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "internal_ui_printer",
-      "target": "internal_ui_printer_init",
-      "confidence_score": 1.0
+      "target": "internal_ui_printer_init"
     },
     {
       "relation": "contains",
@@ -1456,9 +1420,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "internal_ui_printer",
-      "target": "internal_ui_printer_success",
-      "confidence_score": 1.0
+      "target": "internal_ui_printer_success"
     },
     {
       "relation": "contains",
@@ -1467,9 +1431,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "internal_ui_printer",
-      "target": "internal_ui_printer_warning",
-      "confidence_score": 1.0
+      "target": "internal_ui_printer_warning"
     },
     {
       "relation": "contains",
@@ -1478,52 +1442,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "main",
-      "target": "main_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "claude",
-      "target": "claude_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "claude_graphify",
-      "target": "readme_devtool_cli"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "readme_devtool_cli",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L77",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_devtool_cli",
-      "target": "readme_development",
-      "confidence_score": 1.0
+      "target": "main_main"
     },
     {
       "relation": "references",
@@ -1544,17 +1465,6 @@
       "weight": 1.0,
       "source": "readme_devtool_cli",
       "target": "readme_devtool_vscode_kill"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L14",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_devtool_cli",
-      "target": "readme_installation",
-      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1615,61 +1525,6 @@
       "weight": 1.0,
       "source": "readme_devtool_cli",
       "target": "readme_make_uninstall"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_devtool_cli",
-      "target": "readme_requirements",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L34",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_devtool_cli",
-      "target": "readme_usage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L26",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_installation",
-      "target": "readme_uninstall",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L53",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_usage",
-      "target": "readme_devtool_vagrant_cleanup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L36",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_usage",
-      "target": "readme_devtool_vscode_kill",
-      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1855,5 +1710,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "848890a66a6e7f0beb20926adcb944442c006e22"
+  "built_at_commit": "809ff5b93d04eeaaa35e452c0739c09be65589fa"
 }
